@@ -1,2 +1,1 @@
 pytest==8.4.2
-dependencia-inexistente-cicd-2026==1.0.0
