@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">Pipeline de integración y entrega continua</title>
+  <desc id="description">Cinco etapas desde un cambio en GitHub hasta la publicación del reporte de pruebas.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#101f38"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#020617" flood-opacity="0.45"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#7dd3fc"/>
+    </marker>
+    <style>
+      .title { font: 700 46px Arial, sans-serif; fill: #f8fafc; }
+      .subtitle { font: 400 22px Arial, sans-serif; fill: #94a3b8; }
+      .number { font: 700 22px Arial, sans-serif; fill: #07111f; }
+      .box-title { font: 700 24px Arial, sans-serif; fill: #f8fafc; }
+      .box-text { font: 400 17px Arial, sans-serif; fill: #cbd5e1; }
+      .tool { font: 700 16px Arial, sans-serif; fill: #7dd3fc; letter-spacing: 0.5px; }
+      .note { font: 400 18px Arial, sans-serif; fill: #cbd5e1; }
+      .small { font: 400 15px Arial, sans-serif; fill: #94a3b8; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <circle cx="1480" cy="90" r="180" fill="#0ea5e9" opacity="0.08"/>
+  <circle cx="120" cy="820" r="220" fill="#22c55e" opacity="0.06"/>
+
+  <text x="90" y="95" class="title">Pipeline CI/CD del proyecto</text>
+  <text x="90" y="135" class="subtitle">Del cambio propuesto al reporte público, con verificación automática</text>
+
+  <g stroke="#7dd3fc" stroke-width="5" fill="none" marker-end="url(#arrow)">
+    <path d="M 340 365 H 385"/>
+    <path d="M 625 365 H 670"/>
+    <path d="M 910 365 H 955"/>
+    <path d="M 1195 365 H 1240"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="75" y="235" width="265" height="260" rx="24" fill="#13263f" stroke="#38bdf8" stroke-width="2"/>
+    <circle cx="115" cy="275" r="23" fill="#38bdf8"/>
+    <text x="108" y="283" class="number">1</text>
+    <text x="105" y="330" class="box-title">Disparar</text>
+    <text x="105" y="370" class="box-text">Push a main</text>
+    <text x="105" y="400" class="box-text">o pull request</text>
+    <text x="105" y="456" class="tool">GITHUB</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="385" y="235" width="240" height="260" rx="24" fill="#13263f" stroke="#38bdf8" stroke-width="2"/>
+    <circle cx="425" cy="275" r="23" fill="#38bdf8"/>
+    <text x="418" y="283" class="number">2</text>
+    <text x="415" y="330" class="box-title">Preparar</text>
+    <text x="415" y="370" class="box-text">Descargar código</text>
+    <text x="415" y="400" class="box-text">Python 3.12</text>
+    <text x="415" y="456" class="tool">CHECKOUT + SETUP</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="670" y="235" width="240" height="260" rx="24" fill="#13263f" stroke="#38bdf8" stroke-width="2"/>
+    <circle cx="710" cy="275" r="23" fill="#38bdf8"/>
+    <text x="703" y="283" class="number">3</text>
+    <text x="700" y="330" class="box-title">Instalar</text>
+    <text x="700" y="370" class="box-text">Dependencias de</text>
+    <text x="700" y="400" class="box-text">requirements.txt</text>
+    <text x="700" y="456" class="tool">PIP</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="955" y="235" width="240" height="260" rx="24" fill="#13263f" stroke="#f59e0b" stroke-width="2"/>
+    <circle cx="995" cy="275" r="23" fill="#f59e0b"/>
+    <text x="988" y="283" class="number">4</text>
+    <text x="985" y="330" class="box-title">Verificar</text>
+    <text x="985" y="370" class="box-text">Ejecutar tests</text>
+    <text x="985" y="400" class="box-text">Generar HTML</text>
+    <text x="985" y="456" class="tool" fill="#fbbf24">PYTEST + PYTEST-HTML</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1240" y="235" width="285" height="260" rx="24" fill="#13263f" stroke="#22c55e" stroke-width="2"/>
+    <circle cx="1280" cy="275" r="23" fill="#22c55e"/>
+    <text x="1273" y="283" class="number">5</text>
+    <text x="1270" y="330" class="box-title">Entregar</text>
+    <text x="1270" y="370" class="box-text">Guardar artefacto</text>
+    <text x="1270" y="400" class="box-text">Publicar desde main</text>
+    <text x="1270" y="456" class="tool" fill="#4ade80">ARTIFACT + PAGES</text>
+  </g>
+
+  <g>
+    <rect x="90" y="585" width="680" height="190" rx="22" fill="#0b1728" stroke="#ef4444" stroke-width="2"/>
+    <circle cx="135" cy="630" r="18" fill="#ef4444"/>
+    <path d="M127 622 L143 638 M143 622 L127 638" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+    <text x="170" y="638" class="box-title">Si algo falla: detener y mostrar el log</text>
+    <text x="125" y="685" class="note">Dependencia inexistente → falla la instalación</text>
+    <text x="125" y="720" class="note">Resultado incorrecto → falla el quality gate de tests</text>
+    <text x="125" y="752" class="small">Fail fast: los pasos posteriores quedan omitidos.</text>
+  </g>
+
+  <g>
+    <rect x="830" y="585" width="695" height="190" rx="22" fill="#0b1728" stroke="#22c55e" stroke-width="2"/>
+    <circle cx="875" cy="630" r="18" fill="#22c55e"/>
+    <path d="M866 630 L873 637 L886 622" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="910" y="638" class="box-title">Si todo pasa: entregar y publicar</text>
+    <text x="865" y="685" class="note">El reporte queda disponible como artefacto descargable.</text>
+    <text x="865" y="720" class="note">Solo un push aprobado a main despliega GitHub Pages.</text>
+    <text x="865" y="752" class="small">La protección de rama exige el check “verificar”.</text>
+  </g>
+
+  <text x="800" y="848" text-anchor="middle" class="small">GitHub Actions · Ubuntu runner · Python 3.12 · pip · pytest · GitHub Pages</text>
+</svg>
