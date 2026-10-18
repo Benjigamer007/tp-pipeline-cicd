@@ -25,6 +25,9 @@ jobs:
         uses: actions/setup-python@v7
         with:
           python-version: "3.12"
+        
+      - name: Mostrar version de Python
+        run: python --version
 
       - name: Instalar dependencias
         run: python -m pip install -r requirements.txt
