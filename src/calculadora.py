@@ -1,3 +1,3 @@
 def sumar(a, b):
-    """Devuelve la suma de dos números."""
+    """Devuelve la suma de dos números"""
     return a + b
